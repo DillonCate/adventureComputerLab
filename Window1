@@ -1,0 +1,12 @@
+sawDeathStar = false
+if (playerPosition == [2,0]):
+  playerInput = str(input("You approach a window that looks out into space, what do you do?"))
+  if (playerInput == "pewpew"):
+    print ("The Death Star flies by, blasting the planet Last 2019")
+    sawDeathStar = True
+  else:
+    move(playerPosition)
+   
+  
+  
+  
