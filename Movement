@@ -1,0 +1,36 @@
+def move(playerPosition):
+    playerInput = ""
+    while((playerInput != "forward") and (playerInput != "backward") and (playerInput != "left") and (playerInput != "right")):
+        playerInput = input("Enter movement command: ")
+        playerInput = playerInput.lower()
+        #Move Forward
+        if(playerInput == "forward"):
+            if(playerPosition[1] < 4):
+                playerPosition[1] += 1
+            else:
+                print "That's outside of the room! Move again..."
+                playerInput = ""
+        #Move Backward
+        elif(playerInput == "backward"):
+            if(playerPosition[1] > 0):
+                playerPosition[1] -= 1
+            else:
+                print "That's outside of the room! Move again..."
+                playerInput = ""
+        #Move Left
+        elif(playerInput == "left"):
+            if(playerPosition[0] > 0):
+                playerPosition[0] -= 1
+            else:
+                print "That's outside of the room! Move again..."
+                playerInput = ""
+        #Move Right
+        elif(playerInput == "right"):
+            if(playerPosition[0] < 2):
+                playerPosition[0] += 1
+            else:
+                print "That's outside of the room! Move again..."
+                playerInput = ""
+        else:
+            print "That is not a movement command"
+        print playerPosition
