@@ -6,20 +6,37 @@ if (playerPosition == [3,3]): #if then statements
     
     if (playerInput == "yes"): 
         print("i'll check to see if there is something i can use on this") #add action code
-
-    if (playerInput == "yes"):
+          print("")
+          print("      ooooooooooooooooooooooooooooooooooooo")
+          print("      8                                .d88")
+          print("      8                                8888")
+          print("      8                                8888    oooooooooooooooo")
+          print("      8                                8888    8              8")
+          print("      8                                8888    8             d8")
+          print("      8          Enter Password:       8888    8            d88")
+          print("      8                                8888    8           d888")
+          print("      8                                8888    8          d8888")
+          print("      8                                8888    8         d88888")
+          print("      8                                8888    8        d888888")
+          print("      8                                8888    8       d8888888")
+          print("      8                                8888    8      d88888888")
+          print("      8888888888888888888888888888888888888    8     d888888888")
+          print("                                               8    d8888888888")
+          print("         ooooooooooooooooooooooooooooooo       8   d88888888888")
+          print("         d                       ...oood8b      8  d888888888888")
+          print("         d              ...oood88888    888b     8 d8888888888888")
+          print("         d     ...oood88888888888888888888888b    8d88888888888888")
+          print("         dood8888888888888888888888888888888888b")
         import time
         time.sleep(5)  #delay before next text comes up
-
         print("there's a password on it. i need to find what it is before i can use this computer. You also notice the Enter keys are missing")
-    if (playerInput == "no"):
+    else:
         print('*ignore computer*') #move on
-      
         import time
         time.sleep(1)
       
         print('where else should i check? ')
-    #move(playerPosition)  # Move code hasn't been implemented yet
+    move(playerPosition)
 #blackboard [4,1] 
 
 if (playerPosition == [4,1]): 
@@ -33,6 +50,7 @@ if (playerPosition == [4,1]):
         import time
         time.sleep(2)
         print("I feel like one of these problems have a clue. I should solve a few to see if there is a clue here.")
-    if (playerInput == "no"):
+    else:
         print("*Ignore the board*")
+    move(playerPosition)
     
