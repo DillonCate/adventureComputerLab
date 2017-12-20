@@ -1,0 +1,5 @@
+if (playerPosition == [1,2]):
+  print ("You see a computer attempting to boot into Windows 2,0 pewpew")
+  move(playerPosition)
+  
+ 
