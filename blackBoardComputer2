@@ -1,0 +1,38 @@
+playerPosition = [4,1] #list
+if (playerPosition == [3,3]): #if then statements
+    print('You hear a buzzing sound from the computer nearby.')
+    print('I should see if there is anything important i can find on it.')
+    playerInput = input('should i check it out?: ')
+    
+    if (playerInput == "yes"): 
+        print("i'll check to see if there is something i can use on this") #add action code
+
+    if (playerInput == "yes"):
+        import time
+        time.sleep(5)  #delay before next text comes up
+
+        print("there's a password on it. i need to find what it is before i can use this computer. You also notice the Enter keys are missing")
+    if (playerInput == "no"):
+        print('*ignore computer*') #move on
+      
+        import time
+        time.sleep(1)
+      
+        print('where else should i check? ')
+    #move(playerPosition)  # Move code hasn't been implemented yet
+#blackboard [4,1] 
+
+if (playerPosition == [4,1]): 
+
+    print("You notice a blackboard in the corner of the room")
+    playerInput = input("Should i check the board for clues?: ")
+    if (playerInput == "yes"):
+       
+        print("As you look closer you can see some math problems written on the board")
+       
+        import time
+        time.sleep(2)
+        print("I feel like one of these problems have a clue. I should solve a few to see if there is a clue here.")
+    if (playerInput == "no"):
+        print("*Ignore the board*")
+    

@@ -1,0 +1,7 @@
+if(playerPosition == [1, 1]):
+    print "Nothing here..."
+    move(playerPosition)
+    
+if(playerPosition == [1, 3]):
+    print "Nothing here..."
+    move(playerPosition)
