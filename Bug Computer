@@ -1,0 +1,33 @@
+import Tkinter
+
+def button():
+    top = Tkinter.Tk()
+    bugHealth = 25
+    B = Tkinter.Button(top, width = 25, text ="Attack", command = lambda: hi(bugHealth))
+
+    B.pack()
+    top.mainloop()
+    
+def hi(bugHealth):
+    bugHealth = bugHealth - 1
+    if(bugHealth == 0):
+        print "You killed it!"
+    
+bugHealth = 25
+playerInput = ""
+playerPosition = [2, 3]
+if(playerPosition == [2, 3]):
+    print "You approach a computer. There's some smoke coming out of it..."
+    while((playerInput != "yes") and (playerInput != "no")):
+        playerInput = raw_input("Do you want to inspect the computer? ")
+        playerInput = playerInput.lower()
+        if(playerInput == "yes"):
+            print "You open the back of the computer to see what the problem is, but..."
+            print "An alien bug jumps out and attacks!"
+            button()
+        #elif(playerInput == "no"):
+            #move(playerPosition)
+        else:
+            print "That doesn't make sense..."
+    
+    
