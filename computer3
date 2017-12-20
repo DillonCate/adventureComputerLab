@@ -1,4 +1,6 @@
+#Third computer, tile 1,2
 if (playerPosition == [1,2]):
+#hint to go to the Window
   print ("You see a computer attempting to boot into Windows 2,0 pewpew")
   move(playerPosition)
   
