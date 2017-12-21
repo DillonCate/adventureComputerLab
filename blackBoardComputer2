@@ -1,5 +1,6 @@
 playerPosition = [4,1] #list
 if (playerPosition == [3,3]): #if then statements
+    ##hasSeenBoard = True
     print('You hear a buzzing sound from the computer nearby.')
     print('I should see if there is anything important i can find on it.')
     playerInput = input('should i check it out?: ')
@@ -33,6 +34,12 @@ if (playerPosition == [4,1]):
         import time
         time.sleep(2)
         print("I feel like one of these problems have a clue. I should solve a few to see if there is a clue here.")
+        
+        import time
+        time.sleep(5)
+        print ("The first problem is X/2 = 33 ")
+          
     if (playerInput == "no"):
         print("*Ignore the board*")
+    #move(playerPosition)
     
