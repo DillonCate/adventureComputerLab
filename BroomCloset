@@ -1,0 +1,22 @@
+broomClosetUnlocked = False
+if (playerPosition == [2,4]):
+  if broomClosetUnlocked:
+    print("The door is open..... wonder what's inside..")
+    print("There is a name etched in the wall")
+    print("ÛÛÛÛÛÛÛÛÛÛÛ                                ÛÛÛÛÛ")     
+    print("°°ÛÛÛ°°°°°°Û                               °°ÛÛÛ")      
+    print("°ÛÛÛ   Û °  ÛÛÛÛÛÛÛÛ   ÛÛÛÛÛÛ   ÛÛÛÛÛÛÛÛ   °ÛÛÛ ÛÛÛÛÛ")
+    print("°ÛÛÛÛÛÛÛ   °°ÛÛÛ°°ÛÛÛ °°°°°ÛÛÛ °°ÛÛÛ°°ÛÛÛ  °ÛÛÛ°°ÛÛÛ") 
+    print("°ÛÛÛ°°°Û    °ÛÛÛ °°°   ÛÛÛÛÛÛÛ  °ÛÛÛ °ÛÛÛ  °ÛÛÛÛÛÛ°")  
+    print("°ÛÛÛ  °     °ÛÛÛ      ÛÛÛ°°ÛÛÛ  °ÛÛÛ °ÛÛÛ  °ÛÛÛ°°ÛÛÛ") 
+    print("ÛÛÛÛÛ       ÛÛÛÛÛ    °°ÛÛÛÛÛÛÛÛ ÛÛÛÛ ÛÛÛÛÛ ÛÛÛÛ ÛÛÛÛÛ")
+    print("°°°°°       °°°°°      °°°°°°°° °°°° °°°°° °°°° °°°°°") 
+  else:
+    print("The closet is locked, you must input a number!")
+    playerInput = input("What number do you put in?")
+    if playerInput = 66 and hasSeenBoard:
+      print("Wow! The door opened!")
+    elif playerInput = 66 and not hasSeenBoard:
+      print("That's a neck coach, stop trying to cheat!")
+    else:
+      print("The door did nothing.......")
