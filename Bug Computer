@@ -1,0 +1,57 @@
+import Tkinter
+from Tkinter import *
+
+def button():
+    global top
+    top = Tkinter.Tk()
+    global T
+    T = Tkinter.Text(top, height=5, width=50)
+    B = Tkinter.Button(top, width = 25, text ="Attack", command = lambda: hi())  
+    T.pack()  
+    T.insert(INSERT, "You open the back of the computer to see what the problem is, but... An alien bug jumps out and attacks! Quick! Attack the bug by mashing attack!\nHealth: 25")
+    B.pack()
+    top.mainloop()
+    
+    
+def hi():
+    global bugHealth
+    bugHealth = bugHealth - 1
+    if(bugHealth == 0):
+        print "You killed it!"
+        global bugKilled
+        bugKilled = True
+        quit()
+    else:
+        T.delete(2.8, END)
+        T.insert(INSERT, str(bugHealth))
+    
+def quit():
+    top.destroy()
+    killed()
+    
+def killed():
+    print "I wouldn't go back to that computer..."
+    move(playerPosition)
+    
+bugHealth = 25
+bugKilled = False
+playerInput = ""
+playerPosition = [2, 3]
+if(playerPosition == [2, 3]):
+    if(bugKilled == False):
+        print "You approach a computer. There's some smoke coming out of it..."
+        while((playerInput != "yes") and (playerInput != "no")):
+            playerInput = raw_input("Do you want to inspect the computer? ")
+            playerInput = playerInput.lower()
+            if(playerInput == "yes"):
+                print "You open the back of the computer to see what the problem is, but..."
+                print "An alien bug jumps out and attacks!"
+                button()
+            elif(playerInput == "no"):
+                move(playerPosition)
+            else:
+                print "That doesn't make sense..."
+    else:
+        print "I think this is where I found that bug..."
+        print "I'd rather not fight another."
+        move(playerPosition)
