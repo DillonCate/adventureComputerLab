@@ -1,0 +1,27 @@
+#Third computer, tile 2,1
+if (playerPosition == [2,1]):
+#hint to go to the Window
+  print("You see a computer attempting to boot into Windows 2,0 pewpew")
+  print("")
+  print("      ooooooooooooooooooooooooooooooooooooo")
+  print("      8                                .d88")
+  print("      8                                8888")
+  print("      8                                8888    oooooooooooooooo")
+  print("      8                                8888    8              8")
+  print("      8                                8888    8             d8")
+  print("      8          WINDOWS 2,0           8888    8            d88")
+  print("      8            pewpew              8888    8           d888")
+  print("      8                                8888    8          d8888")
+  print("      8           =====----            8888    8         d88888")
+  print("      8                                8888    8        d888888")
+  print("      8                                8888    8       d8888888")
+  print("      8                                8888    8      d88888888")
+  print("      8888888888888888888888888888888888888    8     d888888888")
+  print("                                               8    d8888888888")
+  print("         ooooooooooooooooooooooooooooooo       8   d88888888888")
+  print("         d                       ...oood8b      8  d888888888888")
+  print("         d              ...oood888888888888b     8 d8888888888888")
+  print("         d     ...oood88888888888888888888888b    8d88888888888888")
+  print("         dood8888888888888888888888888888888888b")
+  #move(playerPosition)
+ 

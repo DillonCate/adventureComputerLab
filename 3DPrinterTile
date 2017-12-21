@@ -1,0 +1,20 @@
+hasSeenPrinter = False
+hasEnterKey = False
+if(playerPosition == [0, 2]):
+    if(hasSeenPrinter == False):
+        print "You approach a 3D printer. It's in the middle of printing something. Try coming back later."
+        hasSeenPrinter = True
+        move(playerPosition)
+    elif(hasSeenPrinter == True):
+        print "It looks like the printer is done!"
+        while((playerInput != "yes") and (playerInput != "no")):
+            print "Do you want to take what it printed? "
+            playerInput = input("")
+            playerInput = playerInput.lower()
+            if(playerInput == "yes"):
+                print "You take the object off of the printer. It appears to be an Enter key for a keyboard."
+                hasEnterKey = True
+            elif(playerInput == "no"):
+                move(playerPosition)
+            else:
+                print "That doesn't make sense..."
