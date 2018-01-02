@@ -1,0 +1,23 @@
+if(playerPosition == [1, 2]):
+    print "The floor tile appears to be cracked..."
+    while((playerInput != "yes") and (playerInput != "no")):
+        playerInput = input("Do you want to see whats under the tile? ")
+        playerInput = playerInput.lower()
+        if(playerInput == "yes"):
+            print "You look under the tile. It appears that there is some writing under it..."
+            print "The writing says:"
+            print "print 'You start at red and stop at green. What am I?'"
+            print "if(answer == 'stoplight'):"
+            print "    print '80 85 66 71'"
+            print "elif(answer == 'watermelon'):"
+            print "    print '70 85 82 84'"
+            print "elif(answer == 'Christmas tree'):"
+            print "    print '77 67 68 65 78 75 83'"
+            print "elif(answer == 'apples'):"
+            print "    print '83 84 65 82 32 87 65 82 83'"
+            move(playerPosition)
+            
+        elif(playerInput == "no"):
+            move(playerPosition)
+        else:
+            print "That doesn't make sense..."
