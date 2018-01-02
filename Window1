@@ -1,0 +1,32 @@
+#sets up variable to see if the hint has been seen
+sawDeathStar = false
+#Window 1, tile 2,0
+if (playerPosition == [2,0]):
+#gets input and sees if it matches the hinted input
+  playerInput = str(input("You approach a window that looks out into space, what do you do?"))
+  playerInput = playerInput.lower()
+  if (playerInput == "pewpew"):
+    print("           .          .")
+    print(" .          .                  .          .              .")
+    print("       +.           _____  .        .        + .                    .")
+    print("   .        .   ,-~\"     \"~-.                                +")
+    print("              ,^ ___         ^. +                  .    .       .")
+    print("             / .^   ^.         \         .      _ .")
+    print("            Y  l  o  !          Y  .         __CL\H--.")
+    print("    .       l_ `.___.'        _,[           L__/_\H' \\--_-          +")
+    print("            |^~\"-----------\"\"~ ^|       +    __L_(=): ]-_ _-- -")
+    print("  +       . !                   !     .     T__\ /H. //---- -       .")
+    print("         .   \                 /               ~^-H--'")
+    print("              ^.             .^            .      \"       +.")
+    print("                \"-.._____.,-\" .                    .")
+    print("         +           .                .   +                       .")
+    print("  +          .             +                                  .")
+    print("     .             .      .       ")
+    print("                                                    .")
+    print ("The Death Star flies by, blasting the planet Last 2019")
+    sawDeathStar = True
+  move(playerPosition)
+   
+  
+  
+  
