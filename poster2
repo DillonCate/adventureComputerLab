@@ -1,0 +1,21 @@
+if(playerPosition == [0, 4]):
+    print "There's a poster on the wall. Some of the corners are peeling up..."
+    playerInput = input("Doesn't look like there's much to do here... But you never know.... ")
+    playerInput = playerInput.lower()
+    if(playerInput == "rip"):
+        print "You rip off the poster and find a tunnel through the wall!"
+        while((playerInput != "yes") and (playerInput != "no")):
+            playerInput = input("Want to go through?")
+            playerInput = playerInput.lower()
+            if(playerInput == "yes"):
+                print "You crawl through the hole and begin moving down the tunnel..."
+                print "At the end there appears to be a large dark room. You hop down into the room and splash in water up to your waist!"
+                print "As you begin walking through the water you feel debree floating, and smell is awful!"
+                
+            elif(playerInput == "no"):
+            move(playerPosition)
+            else:
+                print "That doesn't make sense..."
+                
+    else:
+        move(playerPosition)
