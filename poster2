@@ -1,0 +1,116 @@
+doneWithLevers = False
+outOfCompacter = False
+lever1Up = True
+lever2Up = True
+lever3Up = True
+lever4Up = True
+playerPosition = [0, 3]
+if(playerPosition == [0, 3]):
+    print "There's a poster on the wall. Some of the corners are peeling up..."
+    playerInput = input("Doesn't look like there's much to do here... But you never know.... ")
+    playerInput = playerInput.lower()
+    if("rip" in playerInput or "tear" in playerInput or "peel" in playerInput):
+        print "You rip off the poster and find a tunnel through the wall!"
+        while((playerInput != "yes") and (playerInput != "no")):
+            playerInput = input("Want to go through?")
+            playerInput = playerInput.lower()
+            if(playerInput == "yes"):
+                while(outOfCompacter == False):
+                    print "You crawl through the hole and begin moving down the tunnel..."
+                    print "At the end there appears to be a large dark room. You hop down into the room and splash in water up to your waist!"
+                    print "As you begin walking through the water you feel debree floating, and smell is awful!"
+                    print "You hear a screeching sound... The walls are closing in!"
+                    print "By the wall there's a panel missing. There are three wires, a magenta, yellow, and cyan wire."
+                    print "There's also some numbers on the wall: "
+                    print "11011010\n10111011\n00000000"
+                    while(playerInput != "yellow" and playerInput != "magenta" and playerInput != "cyan"):
+                        playerInput = input("What wire do you unplug? ")
+                        playerInput = playerInput.lower()
+                        if(playerInput == "magenta"):
+                            print "You pull out the magenta wire... The walls increase speed!"
+                            print "There's no way you can get out in time... GAME OVER"
+                            outOfCompacter = False
+                        elif(playerInput == "yellow"):
+                            print "You pull out the yellow wire... The walls slow down!"
+                            print "There's nothing more you can do with the panel..."
+                        elif(playerInput == "cyan"):
+                            print "You pull out the cyan wire... The walls increase speed!"
+                            print "There's no way you can get out in time... GAME OVER"
+                        else:
+                            print "There isn't a ", playerInput, " colored wire..."
+                            
+                    print "You walk to the back of the room and see 4 levers on the wall."
+                    print "There's some writing on the wall: insiDe  this roOm you will stay... unless your Wits are preseNt today..."
+                    while(doneWithLevers == False):
+                        #while(playerInput != "1" and playerInput != "2" and playerInput != "3" and playerInput != "4"):
+                        if(True):
+                            playerInput = input("Which lever do you flip? ")
+                            if(playerInput == "3"):
+                                if(lever1Up == True):
+                                    lever1Up = False
+                                else:
+                                    lever1Up = True
+                                if(lever3Up == True):
+                                    lever3Up = False
+                                else:
+                                    lever3Up = True
+                                if(lever4Up == True):
+                                    lever4Up = False
+                                else:
+                                    lever4Up = True
+                            elif(playerInput == "2"):
+                                if(lever2Up == True):
+                                    lever2Up = False
+                                else:
+                                    lever2Up = True
+                                if(lever4Up == True):
+                                    lever4Up = False
+                                else:
+                                    lever4Up = True
+                            elif(playerInput == "1"):
+                                if(lever1Up == True):
+                                    lever1Up = False
+                                else:
+                                    lever1Up = True
+                                if(lever2Up == True):
+                                    lever2Up = False
+                                else:
+                                    lever2Up = True
+                                
+                            elif(playerInput == "4"):
+                                if(lever4Up == True):
+                                    lever4Up = False
+                                else:
+                                    lever4Up = True
+                                    
+                            if(lever1Up == True):
+                                print "Lever 1: Up"
+                            else:
+                                print "Lever 1: Down"
+                            if(lever2Up == True):
+                                print "Lever 2: Up"
+                            else:
+                                print "Lever 2: Down"
+                            if(lever3Up == True):
+                                print "Lever 3: Up"
+                            else:
+                                print "Lever 3: Down"
+                            if(lever4Up == True):
+                                print "Lever 4: Up"
+                            else:
+                                print "Lever 4: Down"
+                                
+                            if(lever1Up == False and lever2Up == False and lever3Up == False and lever4Up == False):
+                                doneWithLevers = True
+                        outOfCompacter = True
+                    print "The walls stop moving! A door creeps open at the end of the room..."
+                    print "You walk into a bright hallway."
+                    break
+                    
+            elif(playerInput == "no"):
+                move(playerPosition)
+            else:
+                print "That doesn't make sense..."
+                
+    else:
+        move(playerPosition)
