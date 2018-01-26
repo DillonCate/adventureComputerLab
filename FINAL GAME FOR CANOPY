@@ -1,9 +1,9 @@
 #start of computer lab
-
-import Tkinter
-from Tkinter import *
-bugHealth = 25   
-def button():
+def computerLab():
+  import Tkinter
+  from Tkinter import *
+  bugHealth = 25   
+  def button():
         global top
         top = Tkinter.Tk()
         global T
@@ -13,7 +13,7 @@ def button():
         T.insert(INSERT, "You open the back of the computer to see what the problem is, but... An alien bug jumps out and attacks! Quick! Attack the bug by mashing attack!\nHealth: 25")
         B.pack()
         top.mainloop()
-def hi():
+  def hi():
         global bugHealth
         bugHealth = bugHealth - 1
         if(bugHealth == 0):
@@ -25,15 +25,15 @@ def hi():
             T.delete(2.8, END)
             T.insert(INSERT, str(bugHealth))
         
-def quit():
+  def quit():
         top.destroy()
         killed()
         
-def killed():
+  def killed():
         print "I wouldn't go back to that computer..."
         move(playerPosition)
     
-def move(playerPosition):
+  def move(playerPosition):
         playerInput = ""
         while((playerInput != "forward") and (playerInput != "backward") and (playerInput != "left") and (playerInput != "right")):
             playerInput = raw_input("Enter movement command: ")
@@ -68,130 +68,263 @@ def move(playerPosition):
                     playerInput = ""
             else:
                 print "That is not a movement command"
-            print playerPosition
-def computerLab():            
-        global playerPosition
-        playerPosition = [1, 0]
-        playerInput = ""
-        hasSeenPrinter = False
-        hasEnterKey = False
-        doneWithLevers = False
-        global outOfCompacter
-        outOfCompacter = False
-        lever1Up = True
-        lever2Up = True
-        lever3Up = True
-        lever4Up = True
-        sawDeathStar = False
-        broomClosetUnlocked = False
-        hasSeenBoard = False
-        isDoorUnlocked = False
-        isReady = False
-        bold = "\033[1m"
-        reset = "\033[0;0m"
-        bugHealth = 25
-        bugKilled = False
+            print playerPosition            
+    global playerPosition
+    playerPosition = [1, 0]
+    playerInput = ""
+    hasSeenPrinter = False
+    hasEnterKey = False
+    doneWithLevers = False
+    global outOfCompacter
+    outOfCompacter = False
+    lever1Up = True
+    lever2Up = True
+    lever3Up = True
+    lever4Up = True
+    sawDeathStar = False
+    broomClosetUnlocked = False
+    hasSeenBoard = False
+    isDoorUnlocked = False
+    isReady = False
+    bold = "\033[1m"
+    reset = "\033[0;0m"
+    bugHealth = 25
+    bugKilled = False
 
-        print("You enter a computer lab, there are a few computers, and windows")
-        print("Move Commands: ")
-        print("forward, backward, right, left.")
+    print("You enter a computer lab, there are a few computers, and windows")
+    print("Move Commands: ")
+    print("forward, backward, right, left.")
 
 
-        move(playerPosition)
+    move(playerPosition)
 
-        while(1==1):
-            ###############################################################################################
+    while(1==1):
+        ###############################################################################################
 
-            #############################################################################################
-            #Window 1, tile 2,0
-            if (playerPosition == [2, 0]):
-                #gets input and sees if it matches the hinted input
-                playerInput = str(raw_input("You approach a window that looks out into space, what do you do?"))
-                playerInput = playerInput.lower()
-                if (playerInput == "pewpew"):
-                    print("           .          .")
-                    print(" .          .                  .          .              .")
-                    print("       +.           _____  .        .        + .                    .")
-                    print("   .        .   ,-~\"     \"~-.                                +")
-                    print("              ,^ ___         ^. +                  .    .       .")
-                    print("             / .^   ^.         \         .      _ .")
-                    print("            Y  l  o  !          Y  .         __CL\H--.")
-                    print("    .       l_ `.___.'        _,[           L__/_\H' \\--_-          +")
-                    print("            |^~\"-----------\"\"~ ^|       +    __L_(=): ]-_ _-- -")
-                    print("  +       . !                   !     .     T__\ /H. //---- -       .")
-                    print("         .   \                 /               ~^-H--'")
-                    print("              ^.             .^            .      \"       +.")
-                    print("                \"-.._____.,-\" .                    .")
-                    print("         +           .                .   +                       .")
-                    print("  +          .             +                                  .")
-                    print("     .             .      .       ")
-                    print("                                                    .")
-                    print ("The Death Star flies by, blasting the planet Last 2019")
-                    sawDeathStar = True
+        #############################################################################################
+        #Window 1, tile 2,0
+        if (playerPosition == [2, 0]):
+            #gets input and sees if it matches the hinted input
+            playerInput = str(raw_input("You approach a window that looks out into space, what do you do?"))
+            playerInput = playerInput.lower()
+            if (playerInput == "pewpew"):
+                print("           .          .")
+                print(" .          .                  .          .              .")
+                print("       +.           _____  .        .        + .                    .")
+                print("   .        .   ,-~\"     \"~-.                                +")
+                print("              ,^ ___         ^. +                  .    .       .")
+                print("             / .^   ^.         \         .      _ .")
+                print("            Y  l  o  !          Y  .         __CL\H--.")
+                print("    .       l_ `.___.'        _,[           L__/_\H' \\--_-          +")
+                print("            |^~\"-----------\"\"~ ^|       +    __L_(=): ]-_ _-- -")
+                print("  +       . !                   !     .     T__\ /H. //---- -       .")
+                print("         .   \                 /               ~^-H--'")
+                print("              ^.             .^            .      \"       +.")
+                print("                \"-.._____.,-\" .                    .")
+                print("         +           .                .   +                       .")
+                print("  +          .             +                                  .")
+                print("     .             .      .       ")
+                print("                                                    .")
+                print ("The Death Star flies by, blasting the planet Last 2019")
+                sawDeathStar = True
+            #move(playerPosition)
+
+        #############################################################################################
+
+        elif(playerPosition == [1, 1]):
+            print "Nothing here..."
+            #move(playerPosition)
+
+        #############################################################################################
+
+        elif(playerPosition == [1, 3]):
+            print "Nothing here..."
+            #move(playerPosition)
+
+        #############################################################################################
+
+
+        elif(playerPosition == [0, 2]):
+            print hasSeenPrinter
+            if(hasSeenPrinter == False):
+                print "You approach a 3D printer. It's in the middle of printing something. \nTry coming back later."
+                hasSeenPrinter = True
                 #move(playerPosition)
-
-            #############################################################################################
-
-            elif(playerPosition == [1, 1]):
-                print "Nothing here..."
-                #move(playerPosition)
-
-            #############################################################################################
-
-            elif(playerPosition == [1, 3]):
-                print "Nothing here..."
-                #move(playerPosition)
-
-            #############################################################################################
-
-
-            elif(playerPosition == [0, 2]):
-                print hasSeenPrinter
-                if(hasSeenPrinter == False):
-                    print "You approach a 3D printer. It's in the middle of printing something. \nTry coming back later."
-                    hasSeenPrinter = True
-                    #move(playerPosition)
-                elif(hasSeenPrinter == True):
-                    print "It looks like the printer is done!"
-                    playerInput = ""
-                    while((playerInput != "yes") and (playerInput != "no")):
-                        print "Do you want to take what it printed? "
-                        playerInput = raw_input("")
-                        playerInput = playerInput.lower()
-                        if(playerInput == "yes"):
-                            print "You take the object off of the printer. \nIt appears to be an Enter key for a keyboard."
-                            hasEnterKey = True
-                            #move(playerPosition)
-                        elif(playerInput == "no"):
-                            #move(playerPosition)
-                            filler = 0
-                        else:
-                            print "That doesn't make sense..."
-
-            ##############################################################################################
-
-
-            ##############################################################################################            
-
-            elif(playerPosition == [1, 2]):
-                print "The floor tile appears to be cracked..."
+            elif(hasSeenPrinter == True):
+                print "It looks like the printer is done!"
                 playerInput = ""
                 while((playerInput != "yes") and (playerInput != "no")):
-                    playerInput = raw_input("Do you want to see whats under the tile? ")
+                    print "Do you want to take what it printed? "
+                    playerInput = raw_input("")
                     playerInput = playerInput.lower()
                     if(playerInput == "yes"):
-                        print "You look under the tile. It appears that there is some writing under it..."
-                        print "The writing says:"
-                        print "print 'You start at red and stop at green. What am I?'"
-                        print "if(answer == 'stoplight'):"
-                        print "    print '80 85 66 71'"     #PUBG
-                        print "elif(answer == 'watermelon'):"
-                        print "    print '70 85 82 84'"     #FURT (CORRECT)
-                        print "elif(answer == 'Christmas tree'):"
-                        print "    print '77 67 68 65 78 75 83'"    #MCDANKS
-                        print "elif(answer == 'apples'):"
-                        print "    print '83 84 65 82 32 87 65 82 83'"      #STAR WARS
+                        print "You take the object off of the printer. \nIt appears to be an Enter key for a keyboard."
+                        hasEnterKey = True
                         #move(playerPosition)
+                    elif(playerInput == "no"):
+                        #move(playerPosition)
+                        filler = 0
+                    else:
+                        print "That doesn't make sense..."
+
+        ##############################################################################################
+
+
+        ##############################################################################################            
+
+        elif(playerPosition == [1, 2]):
+            print "The floor tile appears to be cracked..."
+            playerInput = ""
+            while((playerInput != "yes") and (playerInput != "no")):
+                playerInput = raw_input("Do you want to see whats under the tile? ")
+                playerInput = playerInput.lower()
+                if(playerInput == "yes"):
+                    print "You look under the tile. It appears that there is some writing under it..."
+                    print "The writing says:"
+                    print "print 'You start at red and stop at green. What am I?'"
+                    print "if(answer == 'stoplight'):"
+                    print "    print '80 85 66 71'"     #PUBG
+                    print "elif(answer == 'watermelon'):"
+                    print "    print '70 85 82 84'"     #FURT (CORRECT)
+                    print "elif(answer == 'Christmas tree'):"
+                    print "    print '77 67 68 65 78 75 83'"    #MCDANKS
+                    print "elif(answer == 'apples'):"
+                    print "    print '83 84 65 82 32 87 65 82 83'"      #STAR WARS
+                    #move(playerPosition)
+
+                elif(playerInput == "no"):
+                    #move(playerPosition)
+                    filler = 0
+                else:
+                    print "That doesn't make sense..."
+
+        ###############################################################################################
+        elif(playerPosition == [0, 0]):
+            print("There's a window on this side of the room. ")
+            print("you move over to the widow for a closer look...")
+            print("You see a Martian Dragon flying across the horizon.")
+
+        elif(playerPosition == [0, 3]):
+            print "There's a poster on the wall. Some of the corners are peeling up..."
+            playerInput = raw_input("Doesn't look like there's much to do here... But you never know.... ")
+            playerInput = playerInput.lower()
+            if("rip" in playerInput or "tear" in playerInput or "peel" in playerInput):
+                print "You rip off the poster and find a tunnel through the wall!"
+                while((playerInput != "yes") and (playerInput != "no")):
+                    playerInput = raw_input("Want to go through?")
+                    playerInput = playerInput.lower()
+                    if(playerInput == "yes"):
+                        while(outOfCompacter == False):
+                            print "You crawl through the hole and begin moving down the tunnel..."
+                            print "At the end there appears to be a large dark room. \nYou hop down into the room and splash in water up to your waist!"
+                            print "As you begin walking through the water you feel\n debris floating, and the smell is awful!"
+                            print "You hear a screeching sound... The walls are closing in!"
+                            print "By the wall there's a panel missing. There are three wires, \na magenta, yellow, and cyan wire."
+                            print "There's also some numbers on the wall: "
+                            print "11011010\n10111011\n00000000"
+                            while(playerInput != "yellow" and playerInput != "magenta" and playerInput != "cyan"):
+                                playerInput = raw_input("What wire do you unplug? ")
+                                playerInput = playerInput.lower()
+                                if(playerInput == "magenta"):
+                                    print "You pull out the magenta wire... The walls increase speed!"
+                                    print "There's no way you can get out in time... GAME OVER"
+                                    print "Resetting wire puzzle..."
+                                    playerInput = ""
+                                elif(playerInput == "yellow"):
+                                    print "You pull out the yellow wire... The walls slow down!"
+                                    print "There's nothing more you can do with the panel..."
+                                elif(playerInput == "cyan"):
+                                    print "You pull out the cyan wire... The walls increase speed!"
+                                    print "There's no way you can get out in time... GAME OVER"
+                                    print "Resetting wire puzzle..."
+                                    playerInput = ""
+                                else:
+                                    print "There isn't a ", playerInput, " colored wire..."
+
+                            print "You walk to the back of the room and see 4 levers on the wall."
+                            print("      .--`                    -:/-`                      ``")                                          
+                            print("   +s-.:yo                 -d-``/d-                  `s/:/ss`                 /o//os-")               
+                            print("   N/`  .h                 oy:  `s-                  sh`   y/                -m-   /y")               
+                            print("   :hso:y+                 `oys+/d.                  -hh/:/h`                `yh/--y-")               
+                            print("     `ys.hs`                  -d:/d/                   .+h.sh.                 .:m-+d:")              
+                            print("       sy.sh.                  .d/-do                    /d-+d:                  -d::d+")             
+                            print("        oy`+d-                  .h/`ys`                   :d.:d/                  .d:.ho")            
+                            print("         /y`-d////:-`            `y+`yy/+++/-              -h-.h+----.`            `y/`ss.---.`")     
+                            print("          +h//-..-:sd/            `do:-..../yh.             .d++o:::/sho`           `ys/s/://ohs`")   
+                            print("         /o.        -m:          .s.         oh             o/`       .hs           :o-`      `sd`")  
+                            print("        .s           :d          y.```````````d/           o:          `m-         -s           y+")  
+                            print("        :+//++oosssssos-        `+////++ooooooo/          `y///++oossssoyo         s+///++oosssoyh`")
+                            print "There's some writing on the wall: insiDe  this roOm you will stay... \nunless your Wits are preseNt today..."
+                            while(doneWithLevers == False):
+                                #while(playerInput != "1" and playerInput != "2" and playerInput != "3" and playerInput != "4"):
+                                if(True):
+                                    playerInput = raw_input("Which lever do you flip? ")
+                                    if(playerInput == "3"):
+                                        if(lever1Up == True):
+                                            lever1Up = False
+                                        else:
+                                            lever1Up = True
+                                        if(lever3Up == True):
+                                            lever3Up = False
+                                        else:
+                                            lever3Up = True
+                                        if(lever4Up == True):
+                                            lever4Up = False
+                                        else:
+                                            lever4Up = True
+                                    elif(playerInput == "2"):
+                                        if(lever2Up == True):
+                                            lever2Up = False
+                                        else:
+                                            lever2Up = True
+                                        if(lever4Up == True):
+                                            lever4Up = False
+                                        else:
+                                            lever4Up = True
+                                    elif(playerInput == "1"):
+                                        if(lever1Up == True):
+                                            lever1Up = False
+                                        else:
+                                            lever1Up = True
+                                        if(lever2Up == True):
+                                            lever2Up = False
+                                        else:
+                                            lever2Up = True
+
+                                    elif(playerInput == "4"):
+                                        if(lever4Up == True):
+                                            lever4Up = False
+                                        else:
+                                            lever4Up = True
+
+                                    if(lever1Up == True):
+                                        print "Lever 1: Up"
+                                    else:
+                                        print "Lever 1: Down"
+                                    if(lever2Up == True):
+                                        print "Lever 2: Up"
+                                    else:
+                                        print "Lever 2: Down"
+                                    if(lever3Up == True):
+                                        print "Lever 3: Up"
+                                    else:
+                                        print "Lever 3: Down"
+                                    if(lever4Up == True):
+                                        print "Lever 4: Up"
+                                    else:
+                                        print "Lever 4: Down"
+
+                                    if(lever1Up == False and lever2Up == False and lever3Up == False and lever4Up == False):
+                                        doneWithLevers = True
+                                outOfCompacter = True
+                            print "The walls stop moving! A door creeps open at the end of the room..."
+                            print "You walk into a bright hallway."
+                            print("This hallway, it looks familiar, almost like you've been here before.....")
+                            print("Frank....... The janitor, he's the one that put you here, he knocked you out in the hallway")
+                            print("But why would he do that?")
+                            print("You have to find more answers....")
+                            playerInput = "yes"
+                            continue
 
                     elif(playerInput == "no"):
                         #move(playerPosition)
@@ -199,173 +332,58 @@ def computerLab():
                     else:
                         print "That doesn't make sense..."
 
-            ###############################################################################################
-            elif(playerPosition == [0, 0]):
-                print("There's a window on this side of the room. ")
-                print("you move over to the widow for a closer look...")
-                print("You see a Martian Dragon flying across the horizon.")
+            #else:
+                #move(playerPosition)
 
-            elif(playerPosition == [0, 3]):
-                print "There's a poster on the wall. Some of the corners are peeling up..."
-                playerInput = raw_input("Doesn't look like there's much to do here... But you never know.... ")
-                playerInput = playerInput.lower()
-                if("rip" in playerInput or "tear" in playerInput or "peel" in playerInput):
-                    print "You rip off the poster and find a tunnel through the wall!"
-                    while((playerInput != "yes") and (playerInput != "no")):
-                        playerInput = raw_input("Want to go through?")
-                        playerInput = playerInput.lower()
-                        if(playerInput == "yes"):
-                            while(outOfCompacter == False):
-                                print "You crawl through the hole and begin moving down the tunnel..."
-                                print "At the end there appears to be a large dark room. \nYou hop down into the room and splash in water up to your waist!"
-                                print "As you begin walking through the water you feel\n debris floating, and the smell is awful!"
-                                print "You hear a screeching sound... The walls are closing in!"
-                                print "By the wall there's a panel missing. There are three wires, \na magenta, yellow, and cyan wire."
-                                print "There's also some numbers on the wall: "
-                                print "11011010\n10111011\n00000000"
-                                while(playerInput != "yellow" and playerInput != "magenta" and playerInput != "cyan"):
-                                    playerInput = raw_input("What wire do you unplug? ")
-                                    playerInput = playerInput.lower()
-                                    if(playerInput == "magenta"):
-                                        print "You pull out the magenta wire... The walls increase speed!"
-                                        print "There's no way you can get out in time... GAME OVER"
-                                        print "Resetting wire puzzle..."
-                                        playerInput = ""
-                                    elif(playerInput == "yellow"):
-                                        print "You pull out the yellow wire... The walls slow down!"
-                                        print "There's nothing more you can do with the panel..."
-                                    elif(playerInput == "cyan"):
-                                        print "You pull out the cyan wire... The walls increase speed!"
-                                        print "There's no way you can get out in time... GAME OVER"
-                                        print "Resetting wire puzzle..."
-                                        playerInput = ""
-                                    else:
-                                        print "There isn't a ", playerInput, " colored wire..."
-
-                                print "You walk to the back of the room and see 4 levers on the wall."
-                                print("      .--`                    -:/-`                      ``")                                          
-                                print("   +s-.:yo                 -d-``/d-                  `s/:/ss`                 /o//os-")               
-                                print("   N/`  .h                 oy:  `s-                  sh`   y/                -m-   /y")               
-                                print("   :hso:y+                 `oys+/d.                  -hh/:/h`                `yh/--y-")               
-                                print("     `ys.hs`                  -d:/d/                   .+h.sh.                 .:m-+d:")              
-                                print("       sy.sh.                  .d/-do                    /d-+d:                  -d::d+")             
-                                print("        oy`+d-                  .h/`ys`                   :d.:d/                  .d:.ho")            
-                                print("         /y`-d////:-`            `y+`yy/+++/-              -h-.h+----.`            `y/`ss.---.`")     
-                                print("          +h//-..-:sd/            `do:-..../yh.             .d++o:::/sho`           `ys/s/://ohs`")   
-                                print("         /o.        -m:          .s.         oh             o/`       .hs           :o-`      `sd`")  
-                                print("        .s           :d          y.```````````d/           o:          `m-         -s           y+")  
-                                print("        :+//++oosssssos-        `+////++ooooooo/          `y///++oossssoyo         s+///++oosssoyh`")
-                                print "There's some writing on the wall: insiDe  this roOm you will stay... \nunless your Wits are preseNt today..."
-                                while(doneWithLevers == False):
-                                    #while(playerInput != "1" and playerInput != "2" and playerInput != "3" and playerInput != "4"):
-                                    if(True):
-                                        playerInput = raw_input("Which lever do you flip? ")
-                                        if(playerInput == "3"):
-                                            if(lever1Up == True):
-                                                lever1Up = False
-                                            else:
-                                                lever1Up = True
-                                            if(lever3Up == True):
-                                                lever3Up = False
-                                            else:
-                                                lever3Up = True
-                                            if(lever4Up == True):
-                                                lever4Up = False
-                                            else:
-                                                lever4Up = True
-                                        elif(playerInput == "2"):
-                                            if(lever2Up == True):
-                                                lever2Up = False
-                                            else:
-                                                lever2Up = True
-                                            if(lever4Up == True):
-                                                lever4Up = False
-                                            else:
-                                                lever4Up = True
-                                        elif(playerInput == "1"):
-                                            if(lever1Up == True):
-                                                lever1Up = False
-                                            else:
-                                                lever1Up = True
-                                            if(lever2Up == True):
-                                                lever2Up = False
-                                            else:
-                                                lever2Up = True
-
-                                        elif(playerInput == "4"):
-                                            if(lever4Up == True):
-                                                lever4Up = False
-                                            else:
-                                                lever4Up = True
-
-                                        if(lever1Up == True):
-                                            print "Lever 1: Up"
-                                        else:
-                                            print "Lever 1: Down"
-                                        if(lever2Up == True):
-                                            print "Lever 2: Up"
-                                        else:
-                                            print "Lever 2: Down"
-                                        if(lever3Up == True):
-                                            print "Lever 3: Up"
-                                        else:
-                                            print "Lever 3: Down"
-                                        if(lever4Up == True):
-                                            print "Lever 4: Up"
-                                        else:
-                                            print "Lever 4: Down"
-
-                                        if(lever1Up == False and lever2Up == False and lever3Up == False and lever4Up == False):
-                                            doneWithLevers = True
-                                    outOfCompacter = True
-                                print "The walls stop moving! A door creeps open at the end of the room..."
-                                print "You walk into a bright hallway."
-                                print("This hallway, it looks familiar, almost like you've been here before.....")
-                                print("Frank....... The janitor, he's the one that put you here, he knocked you out in the hallway")
-                                print("But why would he do that?")
-                                print("You have to find more answers....")
-                                playerInput = "yes"
-                                continue
-
-                        elif(playerInput == "no"):
-                            #move(playerPosition)
-                            filler = 0
-                        else:
-                            print "That doesn't make sense..."
-
-                #else:
-                    #move(playerPosition)
-
-            ###############################################################################################
+        ###############################################################################################
 
 
 
 
-            if (playerPosition == [2, 3]):
-                if (bugKilled == False):
-                    print "You approach a computer. There's some smoke coming out of it..."
-                    playerInput = ""
-                    while((playerInput != "yes") and (playerInput != "no")):
-                        playerInput = raw_input("Do you want to inspect the computer? ")
-                        playerInput = playerInput.lower()
-                        if(playerInput == "yes"):
-                            print "You open the back of the computer to see what the problem is, but..."
-                            print "An alien bug jumps out and attacks!"
-                            button()
-                        elif(playerInput == "no"):
-                            move(playerPosition)
-                        else:
-                            print "That doesn't make sense..."
-                else:
-                    print "I think this is where I found that bug..."
-                    print "I'd rather not fight another."
-                    move(playerPosition)
+        if (playerPosition == [2, 3]):
+            if (bugKilled == False):
+                print "You approach a computer. There's some smoke coming out of it..."
+                playerInput = ""
+                while((playerInput != "yes") and (playerInput != "no")):
+                    playerInput = raw_input("Do you want to inspect the computer? ")
+                    playerInput = playerInput.lower()
+                    if(playerInput == "yes"):
+                        print "You open the back of the computer to see what the problem is, but..."
+                        print "An alien bug jumps out and attacks!"
+                        button()
+                    elif(playerInput == "no"):
+                        move(playerPosition)
+                    else:
+                        print "That doesn't make sense..."
+            else:
+                print "I think this is where I found that bug..."
+                print "I'd rather not fight another."
+                move(playerPosition)
 
-        ###############################################################################
-        ###############################################################################
+    ###############################################################################
+    ###############################################################################
 
-            if (playerPosition == [2, 4]):
-                if broomClosetUnlocked:
+        if (playerPosition == [2, 4]):
+            if broomClosetUnlocked:
+                print("The door is open..... wonder what's inside..")
+                print("There is a name etched in the wall")
+                print "______ _          _   "   
+                print "|  ____(_)        | | "     
+                print "| |__   _ _ __ ___| |_  "   
+                print "|  __| | | '__/ __| __| "   
+                print "| |    | | |  \__ \ |_   "  
+                print "|_|____|_|_|  |___/\__|  "  
+                print "|  ____|             | |  " 
+                print "| |__ _ __ __ _ _ __ | | __"
+                print "|  __| '__/ _` | '_ \| |/ /"
+                print "| |  | | | (_| | | | |   < "
+                print "|_|  |_|  \__,_|_| |_|_|\_\ "
+
+            else:
+                print("The closet is locked, you must input a number!")
+                playerInput = raw_input("What number do you put in?")
+                if ((playerInput == "66") and hasSeenBoard):
+                    print("Wow! The door opened!")
                     print("The door is open..... wonder what's inside..")
                     print("There is a name etched in the wall")
                     print "______ _          _   "   
@@ -379,104 +397,20 @@ def computerLab():
                     print "|  __| '__/ _` | '_ \| |/ /"
                     print "| |  | | | (_| | | | |   < "
                     print "|_|  |_|  \__,_|_| |_|_|\_\ "
-
+                elif ((playerInput == "66") and not hasSeenBoard):
+                    print("That's a neck coach, stop trying to cheat!")
                 else:
-                    print("The closet is locked, you must input a number!")
-                    playerInput = raw_input("What number do you put in?")
-                    if ((playerInput == "66") and hasSeenBoard):
-                        print("Wow! The door opened!")
-                        print("The door is open..... wonder what's inside..")
-                        print("There is a name etched in the wall")
-                        print "______ _          _   "   
-                        print "|  ____(_)        | | "     
-                        print "| |__   _ _ __ ___| |_  "   
-                        print "|  __| | | '__/ __| __| "   
-                        print "| |    | | |  \__ \ |_   "  
-                        print "|_|____|_|_|  |___/\__|  "  
-                        print "|  ____|             | |  " 
-                        print "| |__ _ __ __ _ _ __ | | __"
-                        print "|  __| '__/ _` | '_ \| |/ /"
-                        print "| |  | | | (_| | | | |   < "
-                        print "|_|  |_|  \__,_|_| |_|_|\_\ "
-                    elif ((playerInput == "66") and not hasSeenBoard):
-                        print("That's a neck coach, stop trying to cheat!")
-                    else:
-                        print("The door did nothing.......")
+                    print("The door did nothing.......")
 
 
 
-            if (playerPosition == [2, 2]): #if then statements
-                print('You hear a buzzing sound from the computer nearby.')
-                print('I should see if there is anything important I can find on it.')
-                playerInput = raw_input('Should I check it out?: ')
-                playerInput = playerInput.lower()
-                if (playerInput == "yes"): 
-                    print("I'll check to see if there is something I can use on this") #add action code
-                    print("")
-                    print("      ooooooooooooooooooooooooooooooooooooo")
-                    print("      8                                .d88")
-                    print("      8                                8888")
-                    print("      8                                8888    oooooooooooooooo")
-                    print("      8                                8888    8              8")
-                    print("      8                                8888    8             d8")
-                    print("      8          Enter Password:       8888    8            d88")
-                    print("      8                                8888    8           d888")
-                    print("      8                                8888    8          d8888")
-                    print("      8                                8888    8         d88888")
-                    print("      8                                8888    8        d888888")
-                    print("      8                                8888    8       d8888888")
-                    print("      8                                8888    8      d88888888")
-                    print("      8888888888888888888888888888888888888    8     d888888888")
-                    print("                                               8    d8888888888")
-                    print("         ooooooooooooooooooooooooooooooo       8   d88888888888")
-                    print("         d                       ...oood8b      8  d888888888888")
-                    print("         d              ...oood88888    888b     8 d8888888888888")
-                    print("         d     ...oood88888888888888888888888b    8d88888888888888")
-                    print("         dood8888888888888888888888888888888888b")
-                    if(hasEnterKey == False):
-                        print("There's a password on it. You also notice the Enter key is missing...")
-                        print("You should find the enter key first.")
-                    else:
-                        playerInput = raw_input("Enter Password: ")
-                        if(playerInput == "Frank FURT 85 2019"):
-                            isDoorUnlocked = True
-                            print("You hear the computer whir and beep a few times.")
-                            print("Then you hear the exit door creep open! You've escaped the room!")
-                            print("If you're done in the room you can head out that way.")
-                            print("Unless there's more clues to be found...")
-                        else:
-                            print("Nothing happened...")
-
-                else:
-                    print('*ignore computer*') #move on
-
-                    print('where else should I check? ')
-                #move(playerPosition)
-
-            if (playerPosition == [0, 4]): 
-
-                print("You notice a blackboard in the corner of the room")
-                playerInput = raw_input("Should I check the board for clues?: ")
-                playerInput = playerInput.lower()
-                if (playerInput == "yes"):
-                    hasSeenBoard = True
-
-                    print("As you look closer you can see some math problems written on the board")
-
-                    print("I feel like one of these problems have a clue. \nI should solve a few to see if there is a clue here.")
-
-                    print("        ,--.        ,--. ,--.")
-                    print(". ,   ,    /   --    __|  __|")
-                    print(" X   /  ,-'    --      |    |")
-                    print("' ` '   `---        `--' `--'")         
-                if (playerInput == "no"):
-                    print("*Ignore the board*")
-
-
-            #Third computer, tile 2,1
-            if (playerPosition == [2, 1]):
-                #hint to go to the Window
-                print("You see a computer attempting to boot into Windows 2,0 pewpew")
+        if (playerPosition == [2, 2]): #if then statements
+            print('You hear a buzzing sound from the computer nearby.')
+            print('I should see if there is anything important I can find on it.')
+            playerInput = raw_input('Should I check it out?: ')
+            playerInput = playerInput.lower()
+            if (playerInput == "yes"): 
+                print("I'll check to see if there is something I can use on this") #add action code
                 print("")
                 print("      ooooooooooooooooooooooooooooooooooooo")
                 print("      8                                .d88")
@@ -484,10 +418,10 @@ def computerLab():
                 print("      8                                8888    oooooooooooooooo")
                 print("      8                                8888    8              8")
                 print("      8                                8888    8             d8")
-                print("      8          WINDOWS 2,0           8888    8            d88")
-                print("      8            pewpew              8888    8           d888")
+                print("      8          Enter Password:       8888    8            d88")
+                print("      8                                8888    8           d888")
                 print("      8                                8888    8          d8888")
-                print("      8           =====----            8888    8         d88888")
+                print("      8                                8888    8         d88888")
                 print("      8                                8888    8        d888888")
                 print("      8                                8888    8       d8888888")
                 print("      8                                8888    8      d88888888")
@@ -495,138 +429,204 @@ def computerLab():
                 print("                                               8    d8888888888")
                 print("         ooooooooooooooooooooooooooooooo       8   d88888888888")
                 print("         d                       ...oood8b      8  d888888888888")
-                print("         d              ...oood888888888888b     8 d8888888888888")
+                print("         d              ...oood88888    888b     8 d8888888888888")
                 print("         d     ...oood88888888888888888888888b    8d88888888888888")
                 print("         dood8888888888888888888888888888888888b")
-
-        ###############################################################################
-
-            if(playerPosition == [1, 4]):
-                if(isDoorUnlocked == False):
-                    print("There's a door here. It's locked, \nbut there doesn't seem to be a keyhole...")
+                if(hasEnterKey == False):
+                    print("There's a password on it. You also notice the Enter key is missing...")
+                    print("You should find the enter key first.")
                 else:
-                    playerInput = ""
-                    while((playerInput != "yes") and (playerInput != "no")):
-                        print("The exit door is opened now.")
-                        playerInput = raw_input("Are you sure you want to exit? ")
-                        playerInput = playerInput.lower()
-                        if(playerInput == "yes"):
-                            isReady = True
-                            print("Congratulations! You escaped the room!")
-                        elif(playerInput == "no"):
-                            filler = 0
-                        else:
-                            print("That doesn't make sense...")
+                    playerInput = raw_input("Enter Password: ")
+                    if(playerInput == "Frank FURT 85 2019"):
+                        isDoorUnlocked = True
+                        print("You hear the computer whir and beep a few times.")
+                        print("Then you hear the exit door creep open! You've escaped the room!")
+                        print("If you're done in the room you can head out that way.")
+                        print("Unless there's more clues to be found...")
+                    else:
+                        print("Nothing happened...")
 
-        ##############################################################################
+            else:
+                print('*ignore computer*') #move on
 
-            if(playerPosition == [0, 1]):
-                print("You see a poster on the wall: ")
-                print("                             ,ooo888888888888888oooo,                ")
-                print("                          o8888YYYYYY77iiiiooo8888888o               ")
-                print("                         8888YYYY77iiYY8888888888888888              ")
-                print("                        [88YYY77iiY88888888888888888888]")
-                print("                        88YY7iYY888888888888888888888888")
-                print("                       [88YYi 88888888888888888888888888]")
-                print("                       i88Yo8888888888888888888888888888i")
-                print("                       i]        ^^^88888888^^^     o  [i")
-                print("                     oi8 i  _" + bold + "8" + reset + "_       o8o     _" + bold + "5" + reset + "_     i 8io")
-                print("                    ,77788o ^^  ,oooo8888888ooo,   ^ o88777,")
-                print("                    7777788888888888888888888888888888877777")
-                print("                     77777888888888888888888888888888877777")
-                print("                      77777788888888^7777777^8888888777777")
-                print("       ,oooo888 ooo   88888778888^7777ooooo7777^8887788888        ,o88^^^^888oo")
-                print("    o8888777788[];78 88888888888888888888888888888888888887 7;8^ 888888888oo^88")
-                print("   o888888iii788 ]; o 78888887788788888^;;^888878877888887 o7;[]88888888888888o")
-                print("   88888877 ii78[]8;7o 7888878^ ^8788^;;;;;;^878^ ^878877 o7;8 ]878888888888888")
-                print("  [88888888887888 87;7oo 777888o8888^;ii;;ii;^888o87777 oo7;7[]8778888888888888")
-                print("  88888888888888[]87;777oooooooooooooo888888oooooooooooo77;78]88877i78888888888")
-                print(" o88888888888888 877;7877788777iiiiiii;;;;;iiiiiiiii77877i;78] 88877i;788888888")
-                print(" 88^;iiii^88888 o87;78888888888888888888888888888888888887;778] 88877ii;7788888")
-                print(";;;iiiii7iiii^  87;;888888888888888888888888888888888888887;778] 888777ii;78888")
-                print(";iiiii7iiiii7iiii77;i88888888888888888888i7888888888888888877;77i 888877777ii78")
-                print("iiiiiiiiiii7iiii7iii;;;i7778888888888888ii7788888888888777i;;;;iiii 88888888888")
-                print("i;iiiiiiiiiiii7iiiiiiiiiiiiiiiiiiiiiiiiii8877iiiiiiiiiiiiiiiiiii877   88888")
-                print("ii;;iiiiiiiiiiiiii;;;ii^^^;;;ii77777788888888888887777iii;;  77777           78")
-                print("77iii;;iiiiiiiiii;;;ii;;;;;;;;;^^^^8888888888888888888777ii;;  ii7         ;i78")
-                print("^ii;8iiiiiiii ';;;;ii;;;;;;;;;;;;;;;;;;^^oo ooooo^^^88888888;;i7          7;788")
-                print("o ^;;^^88888^     'i;;;;;;;;;;;;;;;;;;;;;;;;;;;^^^88oo^^^^888ii7         7;i788")
-                print("88ooooooooo         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 788oo^;;          7;i888")
-                print("887ii8788888      ;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;^87           7;788")
-                print("887i8788888^     ;;;;;;;ii;;;;;;;oo;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,,      ;;888")
-                print("87787888888     ;;;;;;;ii;;;;;;;888888oo;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,;i788")
-                print("87i8788888^       ';;;ii;;;;;;;8888878777ii8ooo;;;;;;;;;;;;;;;;;;;;;;;;;;i788 7")
-                print("77i8788888           ioo;;;;;;oo^^ooooo ^7i88^ooooo;;;;;;;;;;;;;;;;;;;;i7888 78")
-                print("7i87788888o         7;ii788887i7;7;788888ooooo7888888ooo;;;;;;;;;;;;;;oo ^^^ 78")
-                print("i; 7888888^      8888^o;ii778877;7;7888887;;7;7788878;878;;    ;;;;;;;i78888o ^")
-                print("i8 788888       [88888^^ ooo ^^^^^;;77888^^^^;;7787^^^^ ^^;;;;  iiii;i78888888")
-                print("^8 7888^        [87888 87 ^877i;i8ooooooo8778oooooo888877ii; iiiiiiii788888888")
-                print("  ^^^          [7i888 87;; ^8i;;i7888888888888888887888888   i7iiiiiii88888^^")
-                print("               87;88 o87;;;;o 87i;;;78888788888888888888^^ o 8ii7iiiiii;;")
-                print("               87;i8 877;77888o ^877;;;i7888888888888^^ 7888 78iii7iii7iiii")
-                print("               ^87; 877;778888887o 877;;88888888888^ 7ii7888 788oiiiiiiiii")
-                print("                 ^ 877;7 7888888887 877i;;8888887ii 87i78888 7888888888")
-                print("                  [87;;7 78888888887 87i;;888887i  87ii78888 7888888888]")
-                print("                  877;7 7788888888887 887i;887i^  87ii788888 78888888888")
-                print("                  87;i8 788888888888887 887ii;;^ 87ii7888888 78888888888")
-                print("                 [87;i8 7888888888888887 ^^^^   87ii77888888 78888888888")
-                print("                 87;;78 7888888888888887ii      87i78888888 778888888888")
-                print("                 87;788 7888888888888887i]      87i78888888 788888888888")
-                print("                [87;88 778888888888888887       7ii78888888 788888888888")
-                print("                87;;88 78888888888888887]       ii778888888 78888888888]")
-                print("                7;;788 7888888888888888]        i7888888888 78888888888'")
-                print("                7;;788 7888888888888888         'i788888888 78888888888")
-                print("                7;i788 788888888888888]          788888888 77888888888]")
-                print("                '7;788 778888888888888]         [788888888 78888888888'")
-                print("                ';77888 78888888888888          8888888888 7888888888]")
-                print("                 778888 78888888888888          8888888888 7888888888]")
-                print("                  78888 7888888888888]         [8888888888 7888888888")
-                print("                   7888 788888888888]          88888888888 788888888]")
-                print("                    778 78888888888]           ]888888888 778888888]")
-                print("                    oooooo ^88888^              ^88888^^^^^^^^8888]")
-                print("                   87;78888ooooooo8o            ,oooooo oo888oooooo")
-                print("                   [877;i77888888888]          [;78887i8888878i7888;")
-                print("                    ^877;;ii7888ii788          ;i777;7788887787;778;")
-                print("                     ^87777;;;iiii777          ;77^^^^^^^^^^^^^^^^;;")
-                print("                        ^^^^^^^^^ii7]           ^ o88888888877iiioo")
-                print("                           77777o               [88777777iiiiii;;778")
-                print("                            77777iii            8877iiiii;;;77888888]")
-                print("                            77iiii;8           [77ii;778 788888888888")
-                print("                            7iii;;88           iii;78888 778888888888")
-                print("                           77i;78888]          ;;;;i88888 78888888888")
-                print("                          ,7;78888888          [;;i788888 7888888888]")
-                print("                          i;788888888           ;i7888888 7888888888")
-                print("                          ;788888888]           i77888888 788888888]")
-                print("                          ';88888888'           [77888888 788888888]")
-                print("                           [[8ooo88]             78888888 788888888")
-                print("                            [88888]              78888888 788888888")
-                print("                              ^^^                [7888888 77888888]")
-                print("                                                  88888888 7888887")
-                print("                                                  77888888 7888887")
-                print("                                                   ;i88888 788888i")
-                print("                                                  ,;;78888 788877i7")
-                print("                                                ,7;;i;777777i7i;;7")
-                print("                                                 87778^^^ ^^^^87778")
-                print("                                                  ^^^^ o777777o ^^^")
-                print("                                                  o77777iiiiii7777o")
-                print("                                                 7777iiii88888iii777")
-                print("                                                ;;;i7778888888877ii;;")
-                print("                                                [i77888888^^^^8888877i]")
-                print("                                                77888^oooo8888oooo^8887]")
-                print("                                              [788888888888888888888888]")
-                print("                                              88888888888888888888888888")
-                print("                                              ]8888888^iiiiiiiii^888888]")
-                print("                                                iiiiiiiiiiiiiiiiiiiiii")
-                print("                                                    ^^^^^^^^^^^^^")
+                print('where else should I check? ')
+            #move(playerPosition)
 
-        ###############################################################################
+        if (playerPosition == [0, 4]): 
 
-            if((isDoorUnlocked == True) and (isReady == True)):
-                break
+            print("You notice a blackboard in the corner of the room")
+            playerInput = raw_input("Should I check the board for clues?: ")
+            playerInput = playerInput.lower()
+            if (playerInput == "yes"):
+                hasSeenBoard = True
 
-            move(playerPosition)
+                print("As you look closer you can see some math problems written on the board")
+
+                print("I feel like one of these problems have a clue. \nI should solve a few to see if there is a clue here.")
+
+                print("        ,--.        ,--. ,--.")
+                print(". ,   ,    /   --    __|  __|")
+                print(" X   /  ,-'    --      |    |")
+                print("' ` '   `---        `--' `--'")         
+            if (playerInput == "no"):
+                print("*Ignore the board*")
 
 
-            if(playerInput == "quit"):
-                break
+        #Third computer, tile 2,1
+        if (playerPosition == [2, 1]):
+            #hint to go to the Window
+            print("You see a computer attempting to boot into Windows 2,0 pewpew")
+            print("")
+            print("      ooooooooooooooooooooooooooooooooooooo")
+            print("      8                                .d88")
+            print("      8                                8888")
+            print("      8                                8888    oooooooooooooooo")
+            print("      8                                8888    8              8")
+            print("      8                                8888    8             d8")
+            print("      8          WINDOWS 2,0           8888    8            d88")
+            print("      8            pewpew              8888    8           d888")
+            print("      8                                8888    8          d8888")
+            print("      8           =====----            8888    8         d88888")
+            print("      8                                8888    8        d888888")
+            print("      8                                8888    8       d8888888")
+            print("      8                                8888    8      d88888888")
+            print("      8888888888888888888888888888888888888    8     d888888888")
+            print("                                               8    d8888888888")
+            print("         ooooooooooooooooooooooooooooooo       8   d88888888888")
+            print("         d                       ...oood8b      8  d888888888888")
+            print("         d              ...oood888888888888b     8 d8888888888888")
+            print("         d     ...oood88888888888888888888888b    8d88888888888888")
+            print("         dood8888888888888888888888888888888888b")
+
+    ###############################################################################
+
+        if(playerPosition == [1, 4]):
+            if(isDoorUnlocked == False):
+                print("There's a door here. It's locked, \nbut there doesn't seem to be a keyhole...")
+            else:
+                playerInput = ""
+                while((playerInput != "yes") and (playerInput != "no")):
+                    print("The exit door is opened now.")
+                    playerInput = raw_input("Are you sure you want to exit? ")
+                    playerInput = playerInput.lower()
+                    if(playerInput == "yes"):
+                        isReady = True
+                        print("Congratulations! You escaped the room!")
+                    elif(playerInput == "no"):
+                        filler = 0
+                    else:
+                        print("That doesn't make sense...")
+
+    ##############################################################################
+
+        if(playerPosition == [0, 1]):
+            print("You see a poster on the wall: ")
+            print("                             ,ooo888888888888888oooo,                ")
+            print("                          o8888YYYYYY77iiiiooo8888888o               ")
+            print("                         8888YYYY77iiYY8888888888888888              ")
+            print("                        [88YYY77iiY88888888888888888888]")
+            print("                        88YY7iYY888888888888888888888888")
+            print("                       [88YYi 88888888888888888888888888]")
+            print("                       i88Yo8888888888888888888888888888i")
+            print("                       i]        ^^^88888888^^^     o  [i")
+            print("                     oi8 i  _" + bold + "8" + reset + "_       o8o     _" + bold + "5" + reset + "_     i 8io")
+            print("                    ,77788o ^^  ,oooo8888888ooo,   ^ o88777,")
+            print("                    7777788888888888888888888888888888877777")
+            print("                     77777888888888888888888888888888877777")
+            print("                      77777788888888^7777777^8888888777777")
+            print("       ,oooo888 ooo   88888778888^7777ooooo7777^8887788888        ,o88^^^^888oo")
+            print("    o8888777788[];78 88888888888888888888888888888888888887 7;8^ 888888888oo^88")
+            print("   o888888iii788 ]; o 78888887788788888^;;^888878877888887 o7;[]88888888888888o")
+            print("   88888877 ii78[]8;7o 7888878^ ^8788^;;;;;;^878^ ^878877 o7;8 ]878888888888888")
+            print("  [88888888887888 87;7oo 777888o8888^;ii;;ii;^888o87777 oo7;7[]8778888888888888")
+            print("  88888888888888[]87;777oooooooooooooo888888oooooooooooo77;78]88877i78888888888")
+            print(" o88888888888888 877;7877788777iiiiiii;;;;;iiiiiiiii77877i;78] 88877i;788888888")
+            print(" 88^;iiii^88888 o87;78888888888888888888888888888888888887;778] 88877ii;7788888")
+            print(";;;iiiii7iiii^  87;;888888888888888888888888888888888888887;778] 888777ii;78888")
+            print(";iiiii7iiiii7iiii77;i88888888888888888888i7888888888888888877;77i 888877777ii78")
+            print("iiiiiiiiiii7iiii7iii;;;i7778888888888888ii7788888888888777i;;;;iiii 88888888888")
+            print("i;iiiiiiiiiiii7iiiiiiiiiiiiiiiiiiiiiiiiii8877iiiiiiiiiiiiiiiiiii877   88888")
+            print("ii;;iiiiiiiiiiiiii;;;ii^^^;;;ii77777788888888888887777iii;;  77777           78")
+            print("77iii;;iiiiiiiiii;;;ii;;;;;;;;;^^^^8888888888888888888777ii;;  ii7         ;i78")
+            print("^ii;8iiiiiiii ';;;;ii;;;;;;;;;;;;;;;;;;^^oo ooooo^^^88888888;;i7          7;788")
+            print("o ^;;^^88888^     'i;;;;;;;;;;;;;;;;;;;;;;;;;;;^^^88oo^^^^888ii7         7;i788")
+            print("88ooooooooo         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 788oo^;;          7;i888")
+            print("887ii8788888      ;;;;;;;ii;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;^87           7;788")
+            print("887i8788888^     ;;;;;;;ii;;;;;;;oo;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,,      ;;888")
+            print("87787888888     ;;;;;;;ii;;;;;;;888888oo;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;,,;i788")
+            print("87i8788888^       ';;;ii;;;;;;;8888878777ii8ooo;;;;;;;;;;;;;;;;;;;;;;;;;;i788 7")
+            print("77i8788888           ioo;;;;;;oo^^ooooo ^7i88^ooooo;;;;;;;;;;;;;;;;;;;;i7888 78")
+            print("7i87788888o         7;ii788887i7;7;788888ooooo7888888ooo;;;;;;;;;;;;;;oo ^^^ 78")
+            print("i; 7888888^      8888^o;ii778877;7;7888887;;7;7788878;878;;    ;;;;;;;i78888o ^")
+            print("i8 788888       [88888^^ ooo ^^^^^;;77888^^^^;;7787^^^^ ^^;;;;  iiii;i78888888")
+            print("^8 7888^        [87888 87 ^877i;i8ooooooo8778oooooo888877ii; iiiiiiii788888888")
+            print("  ^^^          [7i888 87;; ^8i;;i7888888888888888887888888   i7iiiiiii88888^^")
+            print("               87;88 o87;;;;o 87i;;;78888788888888888888^^ o 8ii7iiiiii;;")
+            print("               87;i8 877;77888o ^877;;;i7888888888888^^ 7888 78iii7iii7iiii")
+            print("               ^87; 877;778888887o 877;;88888888888^ 7ii7888 788oiiiiiiiii")
+            print("                 ^ 877;7 7888888887 877i;;8888887ii 87i78888 7888888888")
+            print("                  [87;;7 78888888887 87i;;888887i  87ii78888 7888888888]")
+            print("                  877;7 7788888888887 887i;887i^  87ii788888 78888888888")
+            print("                  87;i8 788888888888887 887ii;;^ 87ii7888888 78888888888")
+            print("                 [87;i8 7888888888888887 ^^^^   87ii77888888 78888888888")
+            print("                 87;;78 7888888888888887ii      87i78888888 778888888888")
+            print("                 87;788 7888888888888887i]      87i78888888 788888888888")
+            print("                [87;88 778888888888888887       7ii78888888 788888888888")
+            print("                87;;88 78888888888888887]       ii778888888 78888888888]")
+            print("                7;;788 7888888888888888]        i7888888888 78888888888'")
+            print("                7;;788 7888888888888888         'i788888888 78888888888")
+            print("                7;i788 788888888888888]          788888888 77888888888]")
+            print("                '7;788 778888888888888]         [788888888 78888888888'")
+            print("                ';77888 78888888888888          8888888888 7888888888]")
+            print("                 778888 78888888888888          8888888888 7888888888]")
+            print("                  78888 7888888888888]         [8888888888 7888888888")
+            print("                   7888 788888888888]          88888888888 788888888]")
+            print("                    778 78888888888]           ]888888888 778888888]")
+            print("                    oooooo ^88888^              ^88888^^^^^^^^8888]")
+            print("                   87;78888ooooooo8o            ,oooooo oo888oooooo")
+            print("                   [877;i77888888888]          [;78887i8888878i7888;")
+            print("                    ^877;;ii7888ii788          ;i777;7788887787;778;")
+            print("                     ^87777;;;iiii777          ;77^^^^^^^^^^^^^^^^;;")
+            print("                        ^^^^^^^^^ii7]           ^ o88888888877iiioo")
+            print("                           77777o               [88777777iiiiii;;778")
+            print("                            77777iii            8877iiiii;;;77888888]")
+            print("                            77iiii;8           [77ii;778 788888888888")
+            print("                            7iii;;88           iii;78888 778888888888")
+            print("                           77i;78888]          ;;;;i88888 78888888888")
+            print("                          ,7;78888888          [;;i788888 7888888888]")
+            print("                          i;788888888           ;i7888888 7888888888")
+            print("                          ;788888888]           i77888888 788888888]")
+            print("                          ';88888888'           [77888888 788888888]")
+            print("                           [[8ooo88]             78888888 788888888")
+            print("                            [88888]              78888888 788888888")
+            print("                              ^^^                [7888888 77888888]")
+            print("                                                  88888888 7888887")
+            print("                                                  77888888 7888887")
+            print("                                                   ;i88888 788888i")
+            print("                                                  ,;;78888 788877i7")
+            print("                                                ,7;;i;777777i7i;;7")
+            print("                                                 87778^^^ ^^^^87778")
+            print("                                                  ^^^^ o777777o ^^^")
+            print("                                                  o77777iiiiii7777o")
+            print("                                                 7777iiii88888iii777")
+            print("                                                ;;;i7778888888877ii;;")
+            print("                                                [i77888888^^^^8888877i]")
+            print("                                                77888^oooo8888oooo^8887]")
+            print("                                              [788888888888888888888888]")
+            print("                                              88888888888888888888888888")
+            print("                                              ]8888888^iiiiiiiii^888888]")
+            print("                                                iiiiiiiiiiiiiiiiiiiiii")
+            print("                                                    ^^^^^^^^^^^^^")
+
+    ###############################################################################
+
+        if((isDoorUnlocked == True) and (isReady == True)):
+            break
+
+        move(playerPosition)
+
+
+        if(playerInput == "quit"):
+            break
+
 
